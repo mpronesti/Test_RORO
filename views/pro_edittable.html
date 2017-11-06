@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modifica</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<!-- load angular -->
+	<link rel="stylesheet" type="text/css" href="/css/menu.css">
+	<link rel="stylesheet" type="text/css" href="/css/ng-modal.css" media="all" />
+	<script src="/js/corsi.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/corsi.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.3.js"></script>
+    <style type="text/css">
+    	body{
+    		background-color: white;
+    	}
+    	modal-dialog {
+    		overflow: scroll;
+    		
+    	}
+      .ng-modal-dialog-content {
+          overflow:scroll;
+      }
+    </style>
+</head>
+<body ng-app="ngModalDemo" ng-controller="DemoController">
+<div class="container">
+	<a href="http://www.mptest.cloud/roero-formazione/gest_corsi.html" class="pull-left" style="font-size:2vw;"><i class="fa fa-arrow-left" aria-hidden="true">&nbsp;</i></a>
+	<h1 align="center" style="font-size:30px;">Modifica Schede Area Professioni</h1>
+	
+	<hr>
+
+	<div ng-repeat="pro_row in pro_rows">
+		<div class="row">
+		
+			<div class="col-sm-offset-2 col-sm-6">
+			
+				<p style="font-size:18px;">{{pro_row.title}}</p>
+			</div>
+			<div class="col-sm-4">
+				<button class="btn btn-primary" ng-click="edit(pro_row.tablename,pro_row.title,pro_row.subtitle,pro_row.barcodenumber)" >Modifica</button>
+				<button class="btn btn-danger" ng-click="delete(pro_row.tablename)">Cancella</button>
+			</div>
+			
+		</div>
+		<hr>
+	</div>
+	
+		<button class="btn btn-success btn-block" style="padding:0.3vw 3vw; margin:0 auto;" ng-click="add()">Aggiungi</button>
+	
+</div>
+<modal-dialog show='myData.modalShown' width='50vw' on-close='logClose()' ng-cloak>
+        <p align="center" style="font-size:2.5vw;">Crea Scheda</p>
+        <div class="form-group">
+	        <label for="tablename">id Scheda</label>
+	        <input type="text" class="form-control" id="tablename" ng-model="newTable[0]">
+        </div>
+        <div class="form-group">
+	        <label for="maintitle">Titolo</label>
+	        <input type="text" class="form-control" in="maintitle" ng-model="newTable[1]">
+        </div>
+        <div class="form-group">
+	        <label for="subtitle">Sottotitolo</label>
+	        <input type="text" class="form-control" id="subtitle" ng-model="newTable[2]">
+        </div>
+        <div class="form-group">
+	        <label for="Barcodenumber">Colore Codice a Barre( 1 ~ 20 )</label>
+	        <input type="text" class="form-control" id="barcodenumber" ng-model="newTable[3]">
+        </div>
+        <button ng-click="addTable()" class="btn btn-success pull-right">Aggiungi Scheda</button>
+</modal-dialog>
+
+
+<modal-dialog show='myEditData.modalShown' width='70vw' height="70%" style="overflow:scroll;" on-close='logEditClose()' ng-cloak>
+		
+        <p align="center" style="font-size:2.5vw;">Modifica</p>
+        <div class="form-group">
+	        <label for="tablename">id Scheda</label>
+	        <input type="text" class="form-control" id="tablename" placeholder="ex:panificatoreTbl" ng-model="editTable[0]">
+        </div>
+        <div class="form-group">
+	        <label for="maintitle">Titolo</label>
+	        <input type="text" class="form-control" in="maintitle" placeholder="ex:panificatore" ng-model="editTable[1]">
+        </div>
+        <div class="form-group">
+	        <label for="subtitle">Sottotitolo</label>
+	        <input type="text" class="form-control" id="subtitle" placeholder="ex:panificatore"  ng-model="editTable[2]">
+        </div>
+
+        <div class="form-group">
+	        <label for="barcode">Colore codice a barre</label>
+	        <input type="text" class="form-control" id="barcode"placeholder="1~20"  ng-model="editTable[3]">
+        </div>
+        <div class="row" ng-repeat="row in rows">
+        	
+        	<div class="col-sm-4 col-xs-4">
+        		<textarea class="form-control" ng-model="edit_row[row.id-1].title"></textarea>
+        		
+        	</div>
+        	<div class="col-sm-8 col-xs-8">
+        		<textarea class="form-control" ng-model="edit_row[row.id-1].content"></textarea>
+        	</div>
+        </div>
+        <div id="space-row"></div>
+        <!-- <div class="row">
+        	
+        	<div class="col-sm-4 col-xs-4">
+        		<textarea class="form-control" ng-model="edit_row[row.id-1].title"></textarea>
+        		
+        	</div>
+        	<div class="col-sm-8 col-xs-8">
+        		<textarea class="form-control" ng-model="edit_row[row.id-1].content"></textarea>
+        	</div>
+
+        </div> -->
+        <button ng-click="addTableColumn()" class="btn btn-success pull-left" style="margin-top:0.2vw;">Aggiungi riga</button>
+        <button ng-click="changeTableInfo()" class="btn btn-success pull-right" style="margin-top:0.2vw;">Salva</button>
+       
+</modal-dialog>
+<script type="text/javascript" src="/js/ng-modal.js"></script>
+<script>
+	app = angular.module('ngModalDemo', ['ngModal']);
+      app.config(function(ngModalDefaultsProvider) {
+          return ngModalDefaultsProvider.set({
+            closeButtonHtml: "<i class='fa fa-times'></i>"
+          });
+      });
+      app.controller('DemoController', function($scope,$http,$location,$compile,$httpParamSerializer) {
+
+
+      $http.post('/corsi/pro/list')
+			.success(function(data){
+				$scope.pro_rows=data;
+				console.log(data);
+			})
+			.error(function(data){
+				console.log(data);
+			});
+			
+			$scope.delete=function(tbn)
+			{
+				$http.post('/deletetable/professioni_title/'+tbn)
+				.success(function(data){
+          console.log(data);
+          window.location.reload(); 
+        })
+        .error(function(data){
+          console.log(data);
+          window.location.reload(); 
+        });
+        
+        
+      }
+
+      
+			$scope.myData = {
+            link: "http://google.com",
+            modalShown: false,
+            hello: 'world',
+            foo: 'bar'
+          	}
+          	$scope.logClose = function() {
+            	console.log('close!');
+            	window.location.reload(); 
+          	};
+
+          	$scope.myEditData = {
+            link: "http://google.com",
+            modalShown: false,
+            hello: 'world',
+            foo: 'bar'
+          	}
+          	$scope.logEditClose = function() {
+          		
+            	console.log('close!');
+            	window.location.reload(); 
+            	
+          	};
+
+          	$scope.changeTableInfo=function(){
+
+          		var allData=[];
+          		for (var i=0;i<$scope.olddata.length;i++)
+          		{
+          			allData[i]=$scope.olddata[i];
+          			allData[i+4]=$scope.editTable[i];
+          		}
+          		        		
+          		var json_alldata=angular.toJson(allData);
+          		var object_alldata={'object':json_alldata};
+          		$http.post('/updatetable/professioni_title/'+json_alldata)
+
+          		var titleData=[];
+          		var contentData=[];
+          		for (var i=0;i<$scope.edit_row.length;i++)
+          		{
+
+          			titleData[i]=$scope.edit_row[i].title;
+          			contentData[i]=$scope.edit_row[i].content;
+          		}
+
+
+          		var json_title=angular.toJson(titleData);
+          		var json_content=angular.toJson(contentData);
+
+          		$http.post('/updatetablecontent/'+ $scope.olddata[0] +"/" + $scope.editTable[0] +"/" + json_title + "/" + json_content);
+          		window.location.reload(); 
+          	}
+
+
+          	$scope.add = function() {
+            $scope.myData.modalShown = !$scope.myData.modalShown;
+          	$scope.newTable=[ , , , ];
+            }
+
+            $scope.edit=function(tbn,tbt,tbs,tbb){
+            	$scope.olddata=[tbn,tbt,tbs,tbb];
+            	$http.post('/corsi/pro/table/'+tbn)
+          			.success(function(data){
+						$scope.rows=data;
+						$scope.edit_row=[];
+						for (var i=0;i<data.length;i++)
+						{
+							$scope.edit_row[i]=data[i];
+						}
+
+						console.log($scope.edit_row);
+
+					})
+					.error(function(data){
+						console.log(data);
+					});
+            	$scope.editTable=[tbn,tbt,tbs,tbb];
+            	$scope.myEditData.modalShown=!$scope.myEditData.modalShown;
+            	
+            }
+
+            $scope.addTableColumn=function(){
+
+            	console.log("addTableColumn");
+
+            	$scope.kount=$scope.edit_row.length;
+            	$scope.edit_row[$scope.kount]="";
+            	
+            	console.log($scope.kount);
+            	angular.element(document.getElementById('space-row')).append($compile("<div class='row'><div class='col-sm-4 col-xs-4'><textarea class='form-control' ng-model='edit_row["+$scope.kount+"].title'></textarea></div><div class='col-sm-8 col-xs-8'><textarea class='form-control' ng-model='edit_row["+$scope.kount+"].content'></textarea></div></div>")($scope));
+            }
+
+
+            $scope.addTable=function(){
+            	
+            	$http.post('/createTable/professioni_title/'+ $scope.newTable[0] + "/" +$scope.newTable[1] + "/" + $scope.newTable[2] + "/" +$scope.newTable[3]);
+				window.location.reload(); 
+          	};
+          
+      });
+      
+      
+    </script>
+</body>
+</html>

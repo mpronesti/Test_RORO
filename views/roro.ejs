@@ -1,0 +1,242 @@
+<html>
+<title>RO&RO</title>
+<head>
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Fixed Navbar</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+<link rel="stylesheet" type="text/css" href="css/roro.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.js"></script>
+<script src="js/roro.js"></script>
+</head>
+<body ng-app="roroApp" ng-controller="roroCtrl">
+	<div class="fixed_menu">
+        <div id="formazione_2_bottom" class="img-responsive fixed-top">
+            <img src="img/fascia_azzurra_top.jpg">
+        </div>
+        
+        <div class="menu_bar menu_bar_fixed_top">
+            <ul class="menu_title ">
+                <li><a href="/roro">Ro&Ro</a></li>
+                <li><a href="/">Formazione</a></li>
+                <li>
+                    <div class="dropdown pull-right">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Corsi<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/corsi/manageriale">manageriale gestionale</a></li>
+                                <li><a href="/corsi/sicurezza">sicurezza</a></li>
+                                <li><a href="/corsi/professioni">professioni</a></li>
+                            </ul>
+                    </div>
+                </li>
+                <li>in store promotion</li>
+                <li><a href="/contatii">contatii</a></li> 
+            </ul>
+
+            
+        </div>     
+        <div class="roro_mark roro_fixed_top">
+            <img src="img/LOGO_RO_RO_ROSSO.png">
+        </div>
+    </div>
+
+
+<div class="roro_1">
+	<p align="center" class="roro_1_title">i nostri ingredienti</p>
+	<div class="main_icon_group container">
+
+		<div class="col-sm-3 col-xs-3">
+			<div style="cursor:pointer" class="centerBlock center-block" ng-click="roroFunction(1)">
+				<img class="tutto img-responsive center-block" src="img/3_ROERO/tutto_cuore.png">
+				<p align="CENTER">TUTTO CUORE</p>
+			</div>
+		</div>
+
+		<div class="col-sm-3 col-xs-3">
+			<div style="cursor:pointer" class="centerBlock center-block" ng-click="roroFunction(2)">
+				<img class="tutto img-responsive center-block" src="img/3_ROERO/creativita.png">
+				<p align="CENTER">CREATIVITÀ</p>
+			</div>
+		</div>
+
+		<div class="col-sm-3 col-xs-3">
+			<div style="cursor:pointer" class="centerBlock center-block" ng-click="roroFunction(3)">
+				<img class="tutto img-responsive center-block" src="img/3_ROERO/passione.png">
+				<p align="CENTER">PASSIONE</p>
+			</div>
+		</div>
+
+		<div class="col-sm-3 col-xs-3">
+			<div style="cursor:pointer" class="centerBlock center-block" ng-click="roroFunction(4)">
+				<img class="tutto img-responsive center-block" src="img/3_ROERO/innovazione.png">
+				<p align="CENTER">INNOVAZIONE</p>
+			</div>
+		</div>
+	</div>
+	
+<div id="freccina">
+	<div class="container">
+
+		<div class="col-sm-3 col-xs-3">
+			<div class="centerBlock" ng-click="roroFunction(1)">
+				<div id="freccina1" ng-show="freccina1">
+					<img  src="img/3_roero/freccina.png" class="img-responsive center-block">
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="col-sm-3 col-xs-3">
+			<div class="centerBlock" ng-click="roroFunction(2)">
+				<div id="freccina2" ng-show="freccina2">
+					<img  src="img/3_roero/freccina.png" class="img-responsive center-block">
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="col-sm-3 col-xs-3">
+			<div class="centerBlock" ng-click="roroFunction(3)">
+				<div id="freccina3" ng-show="freccina3">
+					<img  src="img/3_roero/freccina.png" class="img-responsive center-block">
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="col-sm-3 col-xs-3">
+			<div class="centerBlock" ng-click="roroFunction(4)">
+				<div id="freccina4" ng-show="freccina4">
+					<img  src="img/3_roero/freccina.png" class="img-responsive center-block">
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="roro_2" ng-style="roro2_background">
+
+	<div class="roro_text container" id="text1" ng-show="text1">
+		<h3>L’azienda con il sorriso</h3>
+		<p>Siamo una società che si occupa di Promozioni sul Punto vendita, focalizzata nella gestione
+		e organizzazione di “in store activities” nei punti vendita e per la grande distribuzione.
+		Come svolgiamo il nostro lavoro?
+		Con professionalità, serietà e con il sorriso.
+		Perchè pensiamo che sentirsi bene lavorando, sia la base per poter dare ottimi risultati. </p>
+	</div>
+	<div class="roro_text container" ng-show="text2">
+		<h3>Migliori idee ma... low budget!</h3>
+		<p>Il nostro approccio al lavoro non è solo di pura creatività
+			ma anche di attenzione ai costi.
+			Definiti gli obiettivi e le esigenze con i nostri clienti, i progetti nascono da soluzioni creative
+			che rispettano sempre i budget, qualunque essi siano. </p>
+	</div>
+	<div class="roro_text container" ng-show="text3">
+		<h3>Garanzia del risultato</h3>
+		<p>La nostra è una vera e propria missione... fare dell’evento promozionale un vero capolavoro,
+		sviluppando e organizzando tutti i dettagli che lo compongono:
+		Allestimenti • Logistica • Grafica pubblicitaria
+		Personale • Formazione </p>
+	</div>
+	<div class="roro_text container" ng-show="text4">
+		<h3>
+			Chi si ferma è perduto! 
+		</h3>
+		<p>
+			Grazie al nostro know-how nel mondo della Grande distribuzione, abbiamo negli anni innovato
+			non solo l’azienda ma anche i servizi, partendo dalla formazione, con corsi e tutoring
+			specializzati.
+			Siamo orgogliosi di poter dire di essere un Ente Certificato dalla Regione Lombardia. 
+		</p>
+	</div>
+	
+</div>
+
+<div class="roro_3">
+	<div id="formazione_2_bottom" class="img-responsive" ng-init="res_src='img/3_roero/fascia_triangoli_rossa.png'">
+        <img ng-src="{{res_src}}">
+    </div>
+
+    <div align="center" class="titolo_text">
+    	<img src="img/3_roero/titolo_consulenza.png">
+    </div>
+
+    <div class="roro_thumbnail container">
+    	<div class="col-sm-4 col-xs-4"> 
+    		<img class="consulenza" src="img/3_roero/consulenza_360_codice.png">
+    	</div>
+    	<div class="col-sm-8 col-xs-8">
+    		<p>
+    			La nostra azienda offre da sempre ai nostri clienti competenza e professionalità
+nella gestione globale dell’evento promozionale, il tutto unito ad una forte dose
+di simpatia che ci contraddistingue... lavoriamo seriamente ma con il sorriso!
+I nostri principali servizi:</p>
+<p class="subTitle">FORMAZIONE</p>
+<p>
+Presso la nostra sede, coordiniamo ed eseguiamo corsi di formazione accreditata
+dalla regione Lombardia. Attività di recruitment: grazie ad un database di oltre
+10.000 collaboratori, possiamo proporre ad ogni azienda, personale ad hoc
+che rispecchi esigenze specifiche di know how ricercate.
+Attività di formazione: corsi accreditati per ogni tipo di figura professionale
+nel mondo retail, della grande distribuzione, per privati ed aziende. Il servizio di tutoring
+prevede aule e laboratori attrezzati con le più moderne tecnologie nel rispetto delle
+normative vigenti per offrire una formazione di alto livello per tutte le figure professionali.</p>
+<p class="subTitle">
+IN STORE PROMOTION</p>
+<p>
+Ro & Ro Servizi è un’azienda capace di gestire qualsiasi tipo di evento promozionale
+su tutto il terriorio nazionale. Questo ci permette di collaborare con i pdv che richiedono
+personale sia dipendente che indipendente e di poter proporre “pacchetti chiavi in mano”,
+esonerando il cliente da qualsiasi responsabilità contrattuale, assicurativa e previdenziale.
+    		</p>
+    	</div>
+    </div>
+
+
+</div>
+
+
+
+<div class="footer">
+
+ 
+    <div id="formazione_2_bottom" class="img-responsive">
+        <img src="img/fascia_azzurra_top.jpg">
+    </div>
+ 
+    
+    <div class="footer_bottom">
+        <div class="">
+            <img class="footer_mark img-responsive" src="img/LOGO_RO_RO_ROSSO_bottom.png">
+        </div>
+        <img class="tel-icon" src=img/icona_telefono.png>
+        <img class="email-icon" src=img/icona_mail.png>
+        <img class="pos-icon" src=img/icona_posizione.png>
+        <div class="footer_reg">
+            <p>C.F.E P.IVA E REG.IMPRESE</p>
+            <p>03423910136 - REA CO - 313987</p>
+        </div>
+        <div class="footer_centro">
+            <p>via Centro Industriale Europeo 28</p>
+            <p>22078 Turate C</p>
+        </div>
+        <div class="footer_tel">
+            <p>T 02 96480885</p>
+            <p>F 02 96480822</p>
+        </div>
+
+        <div class="footer_info">
+            <p>info@roeroservizi.com</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<html>
+<title>manageriale gestionale</title>
+<head>
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../css/menu.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.js"></script>
+<script src="../js/corsi.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/corsi.css">
+
+<script>
+    $('#table-body').on( 'change keyup keydown paste cut', 'textarea', function (){
+    $(this).height(0).height(this.scrollHeight);
+    console.log("textarea changed")
+}).find( 'textarea' ).change();
+</script>
+
+<style type="text/css">
+
+
+    .corsi_title_area{
+        width: 100%;
+        height: 34vw;
+        background-color: #dc944e;
+    }
+  
+</style>
+</head>
+<body>
+<div class="fixed_menu">
+        <div id="formazione_2_bottom" class="../img-responsive fixed-top">
+            <img src="../img/fascia_azzurra_top.jpg">
+        </div>
+        
+        <div class="menu_bar menu_bar_fixed_top">
+            <ul class="menu_title ">
+                <li><a href="/roro">Ro&Ro</a></li>
+                <li><a href="/">Formazione</a></li>
+                <li><div class="dropdown pull-right">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Corsi<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/corsi/manageriale">manageriale gestionale</a></li>
+                                <li><a href="/corsi/sicurezza">sicurezza</a></li>
+                                <li><a href="/corsi/professioni">professioni</a></li>
+                            </ul>
+                    </div></li>
+                <li>in store promotion</li>
+                <li><a href="/contatii">contatii</a></li> 
+            </ul>
+
+            
+        </div>     
+        <div class="roro_mark roro_fixed_top">
+            <img src="../img/LOGO_RO_RO_ROSSO.png">
+        </div>
+</div>	
+
+    <div align="center" class="corsi_title_area">
+
+    	<p align="center">gestionale manageriale</p>
+    	<img align="center" src="../img/2_corsi/freccina.png">
+
+    </div>
+
+    <div class="corsi_content_area">
+    	<div id="formazione_2_bottom" class="img-responsive">
+            <img src="../img/2_corsi/fascia_triangoli_manageriale.png">
+        </div>
+
+        <div class="container" >
+        <% for (var i=0 ; i < 5 ; i++ ) { %>
+            
+                <div class="row">
+                <% for (var j=0 ; j < 4 ; j++) { %>
+                    <div class="col-md-3 col-sm-3 col-xs-3 barcode_content">
+                        <div class="thumbnail">
+                            <img type="button" class="barcode" src="../img/2_corsi/icona_corso_<%= i*4+j+1 %>.png" data-toggle="modal" data-target="#myModal<%= i*4+j %>" >
+                         
+                        <p class="thumbnail_title" align="center"><%=data[i*4+j].title%></p>
+                        </div>
+                    </div>
+                <% } %>
+                </div>
+                   
+        <% } %>   
+        </div>
+    </div>
+<div class="footer">
+
+ 
+    <div id="formazione_2_bottom" class="img-responsive">
+        <img src="../img/fascia_azzurra_top.jpg">
+    </div>
+ 
+    
+    <div class="footer_bottom">
+        <div class="">
+            <img class="footer_mark img-responsive" src="../img/LOGO_RO_RO_ROSSO_bottom.png">
+        </div>
+        <img class="tel-icon" src=../img/icona_telefono.png>
+        <img class="email-icon" src=../img/icona_mail.png>
+        <img class="pos-icon" src=../img/icona_posizione.png>
+        <div class="footer_reg">
+            <p>C.F.E P.IVA E REG.IMPRESE</p>
+            <p>03423910136 - REA CO - 313987</p>
+        </div>
+        <div class="footer_centro">
+            <p>via Centro Industriale Europeo 28</p>
+            <p>22078 Turate C</p>
+        </div>
+        <div class="footer_tel">
+            <p>T 02 96480885</p>
+            <p>F 02 96480822</p>
+        </div>
+
+        <div class="footer_info">
+            <p>info@roeroservizi.com</p>
+        </div>
+    </div>
+</div>
+
+
+ <% for (var i=0;i < data.length ; i++)
+{
+%>
+        <div id="myModal<%=i%>" class="modal fade" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body" id="table-body">
+                <form method="post" action="/corsi/save/<%=data[i].id%>">
+                <button type="submit" class="close" ><img class="closeimg" src="../img/1_formazione/exit_popup.png"></button>
+                <input class="mainTitle" type="text" name="maintitle" required value="<%=main_data[i].maintitle %>">
+                    <br>
+                <input class="subTitle" type="text" name="subtitle" required value="<%=main_data[i].subtitle %>" >
+                <table border="1px" width="100%">
+                        <tr>
+                            <td class="t_title"><textarea  name="data1"><%=main_data[i].data1%></textarea></td>
+                            <td class="t_content"><textarea  name="data2"><%=main_data[i].data2%></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="t_title"><textarea  name="data3"><%=main_data[i].data3%></textarea></td>
+                            <td class="t_content"><textarea  name="data4"><%=main_data[i].data4%></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="t_title"><textarea  name="data5"><%=main_data[i].data5%></textarea></td>
+                            <td class="t_content"><textarea  name="data6"><%=main_data[i].data6%></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="t_title"><textarea  name="data7"><%=main_data[i].data7%></textarea></td>
+                            <td class="t_content"><textarea  name="data8"><%=main_data[i].data8%></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="t_title"><textarea  name="data9"><%=main_data[i].data9%></textarea></td>
+                            <td class="t_content"><textarea  name="data10"><%=main_data[i].data10%></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="t_title"><textarea  name="data11"><%=main_data[i].data11%></textarea></td>
+                            <td class="t_content"><textarea  name="data12"><%=main_data[i].data12%></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="t_title"><textarea  name="data13"><%=main_data[i].data13%></textarea></td>
+                            <td class="t_content"><textarea  name="data14"><%=main_data[i].data14%></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="t_title"><textarea  name="data15"><%=main_data[i].data15%></textarea></td>
+                            <td class="t_content"><textarea  name="data16"><%=main_data[i].data16%></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="t_title"><textarea  name="data17"><%=main_data[i].data17%></textarea></td>
+                            <td class="t_content"><textarea  name="data18"><%=main_data[i].data18%></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="t_title"><textarea  name="data19"><%=main_data[i].data19%></textarea></td>
+                            <td class="t_content"><textarea  name="data20"><%=main_data[i].data20%></textarea></td>
+                        </tr>
+                </table>
+                
+                
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   <%}%>
+  
+    <script src="../js/corsi.js"></script>
+   <script>
+    var textarea = document.querySelectorAll('textarea');
+    for (var i=0;i<textarea.length;i++)
+    {
+        textarea[i].addEventListener('keydown', autosize);
+        console.log("textarea search");
+    }
+                 
+    function autosize(){
+      var el = this;
+      setTimeout(function(){
+        el.style.cssText = 'height:auto; padding:0';
+        // for box-sizing other than "content-box" use:
+        // el.style.cssText = '-moz-box-sizing:content-box';
+        el.style.cssText = 'height:' + el.scrollHeight + 'px';
+      },0);
+    }
+    </script>
+</script>
+</body>
+</html>

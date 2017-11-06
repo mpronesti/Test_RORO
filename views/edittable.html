@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<!-- load angular -->
+	<link rel="stylesheet" type="text/css" href="/css/menu.css">
+	<link rel="stylesheet" type="text/css" href="/css/ng-modal.css" media="all" />
+	<script src="/js/corsi.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/corsi.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.3.js"></script>
+</head>
+<body >
+
+
+
+<script type="text/javascript" src="/js/ng-modal.js"></script>
+<script>
+	app = angular.module('ngModalDemo', ['ngModal']);
+      app.config(function(ngModalDefaultsProvider) {
+          return ngModalDefaultsProvider.set({
+            closeButtonHtml: "<i class='fa fa-times'></i>"
+          });
+      });
+      app.controller('DemoController', function($scope,$http,$routeParams) {
+
+      		var tablename=$routeParams.params.tid;
+      		console.log(tablename);
+
+      		$http.post('/corsi/tablelist')
+			.success(function(data){
+				$scope.rows=data;
+				console.log(data);
+			})
+			.error(function(data){
+				console.log(data);
+			});
+	
+          
+      });
+      
+    </script>
+</body>
+</html>

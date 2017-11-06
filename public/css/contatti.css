@@ -1,0 +1,82 @@
+ @font-face{
+        font-family: AmericanTypewriter_Light;
+        src:url('../js/AmericanTypewriter_Light.ttf');
+    }
+body{
+		background-color: #f0f0f0;
+	}
+	p {
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+	.contatti_1{
+		width: 100%;
+		height: 45.4vw;
+		background-color: #f5bb8d;
+		margin: 0 auto;
+	}
+	.contatti_1 p{
+		font-size: 3vw;
+		padding-top: 17.6vw;
+		line-height: 0px;
+		font-family: AmericanTypewriter_Light;
+	}
+	.contatti_1 img{
+		width: 23.7vw;
+		height: 20.15vw;
+		margin: 0 auto;
+		line-height: 0px;
+		margin-top: 3vw; 
+
+	}
+	.contatti_2{
+		position: relative;
+		width: 100%;
+		height: 13.7vw;
+		background-color: #db907f;
+
+	}
+	.contatti_2 p{
+		font-size: 2vw;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+	.contatti_2 p:nth-child(1)
+	{
+		
+		position: absolute;
+		top:3.25vw;
+	}
+	.contatti_2 p:nth-child(2)
+	{
+		
+		position: absolute;
+		top:6vw;
+	}
+	.contatti_2 p:nth-child(3){
+		position: absolute;
+		
+		top:8.85vw;
+		font-weight: bold;
+	}
+	.contatti_3{
+		position: relative;
+	}
+	.map{
+		width: 100%;
+		height:37.8vw;
+		
+	}
+	.res_img{
+		position: absolute;
+		top: 0px;
+	}
+	.locator{
+		position: absolute;
+		width: 3.3vw;
+		height: auto;
+		top: 17.2vw;
+		left: 57.2vw;
+
+	}

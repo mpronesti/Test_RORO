@@ -1,0 +1,117 @@
+ @font-face{
+        font-family: AmericanTypewriter_Light;
+        src:url('../js/AmericanTypewriter_Light.ttf');
+        /*font-family: miriam-fixed;
+        src:url('../js/miriam-fixed.ttf');*/
+    }
+body{
+		background-color: #f0f0f0;
+	}
+	p {
+		margin: 0px;
+	}
+	h3 {
+		margin-top: 1vw;
+		margin-bottom: 1vw;
+	}
+	.container{
+		margin: 0 auto;
+	}
+	.centerBlock {
+	  
+	  font-family: AmericanTypewriter_Light;
+	  font-weight: bold;
+	  margin: 0 auto;
+	}
+	.centerBlock img{
+		margin: 0 auto;
+	}
+
+	.centerBlock p{
+		margin-top: 2.65vw!important;
+	}
+	.subTitle{
+		margin-top:1vw;
+	}
+	.roro_1{
+		position: relative;
+		width: 100%;
+		height: 45.4vw;
+		background-color: #cde1b0;
+	}
+	.roro_1_title{
+		margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+		position: absolute;
+		top: 16.5vw;
+		font-family: AmericanTypewriter_Light;
+		font-size: 3vw;
+	}
+	.main_icon_group{
+		margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+		position: absolute;
+		top:26.85vw;
+		font-size: 1.8vw;
+	}
+	.tutto{
+		width: 10.4vw;
+		height: 10.2vw;
+	}
+	.roro_2{
+		
+		width: 100%;
+		height: 16vw;
+		background-color: #d34758;
+	}
+	.roro_text{
+		padding-top: 4.1vw;
+		color: white;
+		
+	}
+	.roro_text h3{
+		font-size: 2vw;
+	}
+	.roro_text p{
+		
+		font-size: 1vw;
+	}
+	.titolo_text{
+		padding-top: 3.8vw;
+	}
+	.titolo_text img{
+		width: 46.1vw;
+		height: 7.1vw;
+		
+	}
+	#freccina{
+		position: absolute;
+		margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+		top:43.75vw;
+		
+	}
+	#freccina1 img, #freccina2 img,#freccina3 img,#freccina4 img{
+		width: 3.25vw;
+		height:3.25vw;
+	}
+	.roro_3{
+		width: 100%;
+		height: 38vw;
+		background-color: #ffe39a;
+	}
+	.roro_thumbnail{
+		padding-top: 1.8vw;
+		font-weight: bold;
+		font-size: 0.8vw;
+	}
+	.consulenza{
+		width: 18.8vw;
+		height:17.65vw;
+	}

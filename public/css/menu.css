@@ -1,0 +1,174 @@
+    @font-face{
+        font-family: AmericanTypewriter_Light;
+        src:url('js/AmericanTypewriter_Light.ttf');
+    }
+
+    .roro_mark
+    {
+        position: fixed;
+        top: -0.75vw;
+        left: 50vw;
+        -webkit-transform: translate(-50%, 0); 
+        background-color: white;
+        width: 18.2vw;
+        height: 14.5vw;
+        border-bottom-left-radius: 9.1vw;
+        border-bottom-right-radius: 9.1vw;
+        /*margin-top: -5vw;*/
+        z-index: 100;
+    }
+    .roro_mark img
+    {
+        width:7.1vw ;
+        height:8vw;
+        margin-left:5.55vw;
+        margin-top:3.5vw;
+        z-index: 100;
+    }
+    .menu_bar{
+        width: 100%;
+        height: 5vw;
+        background-color: white;
+        z-index: 100;
+    }
+    .menu_title{
+        text-decoration: none;
+        list-style: none;
+    }
+    .menu_title li{
+        display: inline;
+        font-size: 1vw;
+    }
+    .menu_title > li:nth-child(1){
+        position: fixed;
+        left:20vw; 
+        top:3.5vw;roro_mark
+    }
+    .menu_title >li:nth-child(2){
+        position: fixed;
+        left:26.4vw; 
+        top:3.5vw;
+    }
+    .menu_title >li:nth-child(3){
+        position: fixed;
+        left:34.25vw; 
+        top:3.5vw;
+    }
+    .menu_title >li:nth-child(4){
+        position: fixed;
+        left:60.8vw; 
+        top:3.5vw;
+    }
+    .menu_title >li:nth-child(5){
+        position: fixed;
+        left:75.53vw; 
+        top:3.5vw;
+    }
+    .dropdown-menu{
+        min-width:inherit;
+    }
+    .fixed-top{
+        position: fixed;
+        top:0px;
+        z-index: 110;
+    }
+    .menu_bar_fixed_top{
+        position: fixed;
+        top:1.5vw;
+        
+    }
+
+    .footer_mark{
+        position: absolute;
+        top: 1.8vw;
+        left: 20.45vw;
+        width: 3.8vw;
+        height: 4.4vw;
+    }
+
+    .footer_bottom p{
+        font-size: 0.8vw!important;
+        line-height: 70%!important;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    .footer_reg{
+        position: absolute;
+        top: 3vw;
+        left: 30.7vw;
+        
+    }
+    .footer_reg p{
+        margin-bottom: 0.5vw!important;
+        margin-top:0px!important;
+    }
+    .pos-icon{
+        position: absolute;
+        width: 1.05vw;
+        height: 1.25vw;
+        left: 44.4vw;
+        top:2.7vw;
+    }
+    .email-icon{
+        position: absolute;
+        width: 1.15vw;
+        height: 0.85vw;
+        left: 70.35vw;
+        top:2.85vw;
+    }
+    .tel-icon{
+        position: absolute;
+        width: 1.2vw;
+        height: 1.2vw;
+        left: 60.15vw;
+        top:2.7vw;
+    }
+    .footer_centro
+    {
+        position: absolute;
+        top:3vw;
+        left: 46vw;
+        font-size: 1vw;
+        
+    }
+    .footer_centro p{
+        margin-bottom: 0.5vw;
+        margin-top:0px!important;
+    }
+    .footer_tel
+    {
+        position: absolute;
+        top:3vw ;
+        left:61.9vw ;
+        font-size: 1vw;
+    }
+    .footer_tel p{
+        margin-bottom: 0.5vw;
+        margin-top:0px!important;
+    }
+    .footer_info{
+        position: absolute;
+        top: 3vw;
+        left: 72vw;
+        font-size: 1vw;
+    }
+    .footer_info p{
+        margin-bottom: 0.5vw;
+        margin-top:0px!important;
+    }
+    img{
+        vertical-align: top;
+    }
+    .footer_bottom{
+        position: relative;
+        height: 6.5vw;
+        background-color: white;
+        overflow: hidden;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+    /* Chrome, Safari, Opera */
+        backface-visibility: hidden;
+    }
+    #formazione_2_bottom img{
+        width: 100%;
+        height:1.5vw;
+    }

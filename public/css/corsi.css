@@ -1,0 +1,136 @@
+table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        vertical-align: middle;
+    }
+	
+	.corsi_title_area p{
+		padding-top: 17.5vw;
+		color: white;
+		font-size: 2.5vw;
+	}
+	.corsi_title_area img{
+		padding-top: 7.6vw;
+		line-height: 0px;
+		width:3.3vw;
+		height:auto;
+		margin: 0 auto;
+	}
+	.corsi_content_area{
+		width: 100%;
+		/*height: 105.65vw;*/
+		background-color: #cde1ae;
+	}
+	.thumbnail{
+		background: transparent;
+		box-shadow: none;
+        border:hidden;
+	}
+
+	.thumbnail img
+	{
+		width: 9vw;
+		height: auto;
+		text-align: center;
+	}
+	.thumbnail_title
+	{
+        margin-top: 2.45vw;
+		font-size: 1vw;
+	}
+    .barcode_content
+    {
+        height: 19.8vw;
+    }
+	.container
+	{
+		padding-top: 4.3vw;
+	}
+	
+	.modal-dialog{
+		position: absolute;
+		height: 49.95vw;
+		width: 50.05vw;
+        height: 400px;
+        top: calc(50% - 25vw) !important;
+        left:calc(50% - 25.025vw)!important;
+        vertical-align: middle;
+		border-radius: unset;
+	}
+    .modal-open
+    {
+        padding: 0px!important;
+
+    }
+    body{
+        background-color: #222;
+    }
+    .modal-content{
+        width: 50.05vw!important;
+        height: 49.95vw!important;
+        padding: 1.25vw;
+        outline: 1px dashed black;
+        outline-offset: -1.25vw;
+    }
+    .modal-body{
+        width: 100%;
+        height: 100%;
+        padding: 1.25vw;
+        padding-top:0.5vw;
+        overflow-y: scroll;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+        }
+    form
+    {
+        margin:0px!important;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .closeimg{
+        width: 2.1vw;
+        height: 2.1vw;
+        margin-bottom: -0.5vw;
+    }
+    
+    .mainTitle
+    {
+        width: 100%;
+        font-size: 2vw;
+        border:hidden;
+        text-align: center;
+    }
+    .subTitle
+    {
+        width: 100%;
+        font-size: 1vw;
+        border:hidden;
+        text-align: center;
+    }
+    textarea{
+
+        display: block;
+        width: 100%;
+        font-size: 1vw;
+        vertical-align: middle;
+        border:hidden;
+        box-sizing: border-box;
+        max-height: 160px; 
+        min-height: 38px;
+        overflow:hidden;
+        resize: none;
+
+    }
+    input{
+        padding: 0px;
+        margin:0px;
+    }
+    .t_title
+    {
+        width: 22.6%;
+    }
+    .t_content{
+        width: 77.4%;
+    }

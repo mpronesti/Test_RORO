@@ -1,0 +1,176 @@
+<html>
+<title>corsi</title>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.js"></script>
+<script src="js/corsi.js"></script>
+
+
+
+
+<style type="text/css">
+
+	.corsi_title_area{
+		width: 100%;
+		height: 34vw;
+		background-color: #dd944f;
+	}
+	.corsi_title_area p{
+		padding-top: 17.5vw;
+		color: white;
+		font-size: 2.5vw;
+	}
+	.corsi_title_area img{
+		padding-top: 7.6vw;
+		line-height: 0px;
+		width:3.3vw;
+		height:auto;
+		margin: 0 auto;
+	}
+	.corsi_content_area{
+		width: 100%;
+		height: 105.65vw;
+		background-color: #cde1ae;
+	}
+	.thumbnail{
+		background: transparent;
+		
+	}
+
+	.thumbnail img
+	{
+		width: 9vw;
+		height: auto;
+		text-align: center;
+	}
+	.thumbnail_title
+	{
+        margin-top: 2.45vw;
+		font-size: 1vw;
+	}
+    .barcode_content
+    {
+        height: 19.8vw;
+    }
+	.container
+	{
+		padding-top: 4.3vw;
+	}
+	.ngdialog.ngdialog-theme-default .ngdialog-content{
+		width: 50.2vw;
+		height: 50.3vw;
+
+	}
+	.modal_dialog{
+		
+		margin: auto;
+		height: 47vw;
+		width: 48vw;
+		border: 1px dashed black;
+	}
+
+</style>
+</head>
+<body>
+<div class="fixed_menu">
+        <div id="formazione_2_bottom" class="img-responsive fixed-top">
+            <img src="img/fascia_azzurra_top.jpg">
+        </div>
+        
+        <div class="menu_bar menu_bar_fixed_top">
+            <ul class="menu_title ">
+                <li><a href="roro.html">Ro&Ro</a></li>
+                <li><a href="index.html">Formazione</a></li>
+                <li><div class="dropdown pull-right">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Corsi<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">manageriale gestionale</a></li>
+                                <li><a href="#">sicurezza</a></li>
+                                <li><a href="#">professioni</a></li>
+                            </ul>
+                    </div></li>
+                <li>in store promotion</li>
+                <li><a href="contatti.html">contatii</a></li> 
+            </ul>
+
+            
+        </div>     
+        <div class="roro_mark roro_fixed_top">
+            <img src="img/LOGO_RO_RO_ROSSO.png">
+        </div>
+</div>	
+
+    <div align="center" class="corsi_title_area">
+
+    	<p align="center">gestionale manageriale</p>
+    	<img align="center" src="img/2_corsi/freccina.png">
+
+    </div>
+
+    <div class="corsi_content_area">
+    	<div id="formazione_2_bottom" class="img-responsive">
+            <img src="img/2_corsi/fascia_triangoli_manageriale.png">
+        </div>
+
+        <div class="container" >
+        <% for (var i=0 ; i < 5 ; i++ ) { %>
+            
+                <div class="row">
+                <% for (var j=0 ; j < 4 ; j++) { %>
+                    <div class="col-md-3 col-sm-3 col-xs-3 barcode_content">
+                        <div class="thumbnail">
+                            <img class="barcode" src="img/2_corsi/icona_corso_1.png" width="700" height="700" ng-click="open()">
+                         
+                        <p class="thumbnail_title" align="center">Game Day</p>
+                        </div>
+                    </div>
+                <% } %>
+                </div>
+                   
+        <% } %>   
+        </div>
+    </div>
+<div class="footer">
+
+ 
+    <div id="formazione_2_bottom" class="img-responsive">
+        <img src="img/fascia_azzurra_top.jpg">
+    </div>
+ 
+    
+    <div class="footer_bottom">
+        <div class="">
+            <img class="footer_mark img-responsive" src="img/LOGO_RO_RO_ROSSO_bottom.png">
+        </div>
+        <div class="footer_reg">
+            <p>C.F.E P.IVA E REG.IMPRESE</p>
+            <p>03423910136 - REA CO - 313987</p>
+        </div>
+        <div class="footer_centro">
+            <p>via Centro Industriale Europeo 28</p>
+            <p>22078 Turate C</p>
+        </div>
+        <div class="footer_tel">
+            <p>T 02 96480885</p>
+            <p>F 02 96480822</p>
+        </div>
+
+        <div class="footer_info">
+            <p>info@roeroservizi.com</p>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="js/corsi.js"></script>
+   
+</body>
+</html>

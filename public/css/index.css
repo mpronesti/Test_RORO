@@ -1,0 +1,456 @@
+ @font-face{
+        font-family: AmericanTypewriter_Light;
+        src:url('../js/AmericanTypewriter_Light.ttf');
+    }
+    @media (min-width: 768px)
+    {
+        .modal-dialog
+        {
+            width:100%!important;
+        }
+    }
+ body{
+        padding: 0px!important;
+        margin: 0px;
+        background-color: #e0e0e0;
+    }
+
+        .ngdialog-content{
+            width: 50.3vw;
+            height: 40.1vw;
+        }
+        
+        .w3-content
+        {
+            max-width: 100%!important;
+        }
+        .paddingHeader {
+            position: fixed;
+            right: 0;
+            top: 0;
+            
+            text-align: right;
+            background-color: white;
+        }
+        .modal_dialog{
+            margin:0 auto;
+            width: 100%!important;
+            /*height: 40.1vw;*/
+        }
+        .modal-content{
+            margin:0 auto!important;
+        }
+        .modal_img{
+            width: 22vw;
+            height: 37vw;
+        }
+
+        .hero
+        {
+            position: absolute;
+            top: -1vw;
+            width: 100%;
+            height: auto;
+        }
+        .hero1
+        {
+            position: absolute;
+            top:16.5vw;
+            width: 100%;
+            height: auto;
+        }
+        .hero2
+        {
+            position: absolute;
+            top:48.5vw;
+            width: 100%;
+            height: auto;
+        }
+        .hero3
+        {
+            position: absolute;
+            top:78.7vw;
+            width: 100%;
+            height: 600px;
+        }
+        svg
+        {
+            padding: 2vw 0px;
+        }
+        .scrollArea{
+            position: relative;
+            padding-top: 5vw;
+
+        }
+        .hover_title{
+            font-size: 0.8vw;
+            cursor:pointer
+        }
+        .over_title{
+            margin-top:1.5vw;
+            opacity: 1;
+            cursor:pointer
+        }
+ p {
+    padding: 0px;
+        margin: 0px;
+    }
+    .footer p{
+        padding: 0px;
+        margin: 0.5vw 0px ;
+    }
+    .row{
+        margin: 0px;
+        padding: 0px;
+    }
+    .container-fluid
+    {
+        padding: 0px;
+        margin: 0px;
+    }
+    .fascia_azzurra_top img
+    {
+       
+        width: 100%;
+        
+    }
+
+    .fascia_azzurra{
+        background-color: red;
+    }
+    .fascia_azzurra img{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        background-color: red;
+    }
+    .second-navbar
+    {
+
+        margin-top: 1.45vw;
+
+    }
+    .navbar-default{
+        width: 100%;
+        height:5vw;
+        background-color: #ffff00;
+    }
+    /*.formazione-content-text{
+        padding-top: 300px;
+    }*/
+    /*.formazione-content-text p{
+        color: white;
+        font-size: 40px;
+        line-height: 30px;
+    }*/
+    
+    .text-center{
+        color: white;
+    }
+    .btn-info{
+        
+        font-size: 1vw;
+        background:transparent;
+        border:0.05vw dashed #ffffff;
+        border-radius: 0.5vw;
+        padding: 0.3vw 0.6vw;
+    }
+    .thumbnail {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        
+        vertical-align: bottom;
+        width: 13vw;
+        height: 17vw;
+
+    }
+
+    #formazione_2_bottom img{
+        width: 100%;
+        height:1.5vw;
+        z-index: 20;
+    }
+    #formazione_1 
+    {
+      position: relative;
+      
+      width: 100%;
+      height: 47.5vw;
+      background-color:#5fa5b0; 
+      
+    }    
+    .ogni_text
+    {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        margin-top: 17.3vw;
+        color: white;
+        font-size: 2vw;
+        font-family: AmericanTypewriter_Light;
+
+    }
+    .noi_text
+    {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        margin-top: 19.75vw;
+        color: white;
+        font-size: 2vw;
+        font-family: AmericanTypewriter_Light;
+    }
+    .corsi_text
+    {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        margin-top: 23.55vw;
+        color: white;
+        font-size: 3vw;
+        font-family: AmericanTypewriter_Light;
+    }
+    .row_thumbnail
+    {
+        font-size: 1.5vw;
+        font-family: AmericanTypewriter_Light;
+    }
+    .manageriale{
+        position: absolute;
+        left: 25.5vw;
+        top:28.6vw;
+        line-height: 70%;
+
+        
+    }
+    .row_thumbnail img {
+        margin-bottom: 0px;
+    }
+    .thumbnail_manageriale{
+        width: 11.75vw;
+        height:10vw;
+    }
+    .sicurezza{
+        position: absolute;
+        top:29vw;
+        left: 43.5vw;
+        line-height: 70%;
+    }
+    .thumbnail_sicurezza{
+        
+        width:13vw;
+        height: 10vw
+    }
+    .professioni{
+        position: absolute;
+        top: 31vw;
+        left: 62.85vw;
+        line-height: 70%;
+    }
+    .thumbnail_professioni{
+        
+        width: 12.55vw;
+        height: 6.4vw;
+    }
+    .thumbnail_text_11{
+        margin-top: 1.3vw;
+    }
+    .thumbnail_text_12{
+        margin-top: 0.4vw;
+    }
+    .thumbnail_btn1{
+        margin-top: 1.3vw;
+    }
+    .thumbnail_btn2{
+        margin-top: 2.7vw;
+    }
+    .thumbnail_text_2{
+        margin-top: 0.9vw;
+    }
+    .thumbnail_text_3{
+        margin-top: 2.45vw;
+    }
+    #formazione_2 {height: 13.4vw;background-color:#fdc94f; }
+    .text_area
+    {
+        
+        width: 58vw;
+        margin: auto;
+        padding-top:3vw;
+    }
+    .text_area p:nth-child(1)
+    {
+        font-size: 2vw;        
+    }
+    .text_area p:nth-child(2)
+    {
+        font-size: 0.9vw;        
+    }
+    #formazione_2_bottom{
+        /*background-image: url('img/1_FORMAZIONE/fascia_triangoli_gialla.png');*/
+        
+        /*position: absolute;
+        top:0;*/
+        width:100%;
+        z-index: 120;
+        
+    }
+    #formazione_3 {position: relative;  height: 95.55vw;background-color:#ce4452; }
+    
+    #res
+    {
+        width: 100%;
+        height:1.5vw;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    .formazion_icon_size:hover{
+        
+    }
+    .formazion_title{
+        left:44.5vw; 
+        top:15.8vw;
+        position: absolute;
+        
+    }
+    .formazion_title img{
+        width:10.4vw;
+        height: 1.55vw;
+    }
+    .formazion_icon
+    {
+        position: absolute;
+        left:56.95vw;
+        top:8.65vw;
+
+    }
+    .formazion_icon_over
+    {
+        position: absolute;
+        left:58.95vw;
+        top:10.65vw;
+        width: 5vw;
+        height: 5vw;
+        border-radius: 50%;
+        background-color: black;
+        opacity: 0;
+        color: white;
+    }
+
+     .formazion_icon_over:hover
+    
+    {
+        -webkit-transform: scale(1);
+         -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        
+        opacity: 0.5;
+    }
+    .formazion_icon img:hover .formazion_icon_over{
+        /*-webkit-transform: scale(1);
+         -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+         opacity: 1;*/
+         opacity: 0.5;
+    }
+
+    .formazion_icon img
+    {
+        width: 10vw;
+        height: auto;
+    }
+    .aule_laboratori_icon
+    {
+        position: absolute;
+        left: 32.75vw;
+        top:42vw;
+    }
+    .aule_laboratori_icon_over{
+        position: absolute;
+        left: 35.25vw;
+        top:44.5vw;
+        width: 5vw;
+        height: 5vw;
+        border-radius: 50%;
+        background-color: black;
+        opacity: 0;
+        color: white;
+    }
+    .aule_laboratori_icon_over:hover{
+        opacity: 0.5;
+    }
+    .aule_laboratori_icon img
+    {
+        width: 10vw;
+        height: auto;
+    }
+    .aule_title{
+        position: absolute;
+        left:45.95vw;
+        top:45.8vw;
+        
+    }
+    .aule_title img{
+        width: 10vw;
+        height:4.5vw;
+    }
+    .certificazioni_title{
+        position: absolute;
+        left:53.1vw;
+        top:76.45vw;
+        
+    }
+    .certificazioni_icon_over{
+        position: absolute;
+        left: 46.75vw;
+        top:69.5vw;
+        width: 5vw;
+        height: 5vw;
+        border-radius: 50%;
+        background-color: black;
+        opacity: 0;
+        color: white;
+    }
+    .certificazioni_icon_over:hover
+    {
+        opacity: 0.5;
+    }
+    .certificazioni_title img{
+        width: 10.3vw;
+        height:2.7vw;
+    }
+
+
+   .certificazioni_icon
+    {
+        position: absolute;
+        left: 42.85vw;
+        top:67.5vw;
+    }
+    .certificazioni_icon img
+    {
+        width: 12.85vw;
+        height: 10vw;
+    }
+    .barcode{
+        position: absolute;
+        left: 44.45vw;
+        top: 88.65vw;
+    }
+    .barcode_size{
+        width:11.15vw;
+        height:4vw ;
+    }
